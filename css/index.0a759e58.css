@@ -1,0 +1,210 @@
+.news-card {
+    align-items: center;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: rgba(33, 36, 58, .9);
+    border: 1px solid hsla(0, 0%, 100%, .05);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 84px;
+    isolation: isolate;
+    padding: 10px;
+    position: relative;
+    width: 300px
+}
+
+.news-card img {
+    border: 1px solid hsla(0, 0%, 100%, .05);
+    border-radius: 12px;
+    height: 64px;
+    min-width: 64px;
+    order: 0;
+    width: 64px
+}
+
+.news-card .text-c {
+    height: 100%;
+    order: 1;
+    width: 100%
+}
+
+.news-card .text-c h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: capitalize;
+    width: 100%
+}
+
+.news-card .text-c p {
+    color: #8d8d8d;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 120%;
+    width: 90%
+}
+
+.news-feed {
+    bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    left: 60px;
+    position: fixed;
+    width: 300px;
+    z-index: 99999
+}
+
+.news-feed,
+.news-feed>* {
+    transition: all .4s cubic-bezier(.25, 1.41, 1, .9)
+}
+
+.news-feed.left {
+    transform: translate(-150%)
+}
+
+.news-feed>.news-card:first-child {
+    box-shadow: 0 -5px 6px #0003;
+    transform: translateY(168px);
+    z-index: 30
+}
+
+.news-feed>.news-card:nth-child(2) {
+    box-shadow: 0 -5px 6px #0000001a;
+    transform: translateY(68px) scale(.97);
+    z-index: 25
+}
+
+.news-feed>.news-card:nth-child(3) {
+    transform: translateY(-32px) scale(.93);
+    z-index: 20
+}
+
+.news-feed>.news-card:hover {
+    scale: unset
+}
+
+.news-feed.expanded>.news-card:hover {
+    scale: 1.05
+}
+
+.news-feed:hover>.news-card:first-child {
+    transform: translateY(168px)
+}
+
+.news-feed:hover>.news-card:nth-child(2) {
+    transform: translateY(60px) scale(.97)
+}
+
+.news-feed:hover>.news-card:nth-child(3) {
+    transform: translateY(-49px) scale(.93)
+}
+
+.news-feed.expanded>.news-card:first-child {
+    box-shadow: none;
+    transform: translateY(168px)
+}
+
+.news-feed.expanded>.news-card:nth-child(2) {
+    box-shadow: none;
+    transform: translateY(-5px) scale(1)
+}
+
+.news-feed.expanded>.news-card:nth-child(3) {
+    box-shadow: none;
+    transform: translateY(-178px) scale(1)
+}
+
+.news-feed>span.more {
+    bottom: 62px;
+    color: #fff;
+    font-size: 13px;
+    height: 12px;
+    opacity: .3;
+    right: 10px;
+    text-align: right;
+    text-transform: capitalize;
+    z-index: 35
+}
+
+.news-feed>button.close,
+.news-feed>span.more {
+    font-weight: 400;
+    line-height: 120%;
+    position: absolute
+}
+
+.news-feed>button.close {
+    align-items: center;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    background: hsla(0, 0%, 100%, .02);
+    border-radius: 99px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    gap: 5px;
+    height: 30px;
+    justify-content: center;
+    opacity: 0;
+    padding: 8px 10px;
+    pointer-events: none;
+    right: 0;
+    text-transform: uppercase;
+    top: -50px;
+    transition-delay: .3s
+}
+
+.news-feed.expanded>button.close {
+    opacity: 1;
+    pointer-events: all
+}
+
+.news-feed>span.more:hover {
+    text-decoration: underline
+}
+
+.ell {
+    content: url("bg-circle.54ac8d19.webp");
+    height: 713.49px;
+    opacity: .8;
+    pointer-events: none;
+    position: absolute;
+    width: 1027.98px;
+    z-index: -1
+}
+
+.container.main .ell:first-of-type {
+    bottom: -50px;
+    left: -650px
+}
+
+.container.main .ell:last-of-type {
+    bottom: -90px;
+    right: -650px;
+    transform: rotate(-30deg)
+}
+
+.wwu-wrapper .ell {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.contact-block {
+    z-index: 10
+}
+
+.contact-block .bg {
+    content: url("bg-bottom.9c089e6c.webp");
+    height: 2021px;
+    left: -50%;
+    position: absolute;
+    top: -60%;
+    width: 1782.04px
+}

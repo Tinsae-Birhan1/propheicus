@@ -1,0 +1,41 @@
+.canvas__wrapper,
+.canvas__wrapper canvas {
+    height: 100%;
+    width: 100%
+}
+
+.logo__wrapper {
+    gap: 0;
+    height: 24px
+}
+
+.logo__wrapper img:first-child {
+    content: url("logo_part0.b455c599.svg")
+}
+
+.logo__wrapper img:last-child {
+    content: url("logo_part1.7955aa37.svg")
+}
+
+.logo__wrapper:hover>.canvas__wrapper {
+    transform: scale(1.5)
+}
+
+.logo__wrapper>.canvas__wrapper {
+    height: 35px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -5px;
+    pointer-events: none;
+    width: 35px
+}
+
+@media (max-width:768px) {
+    .logo__wrapper {
+        left: 50%;
+        order: 1;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
